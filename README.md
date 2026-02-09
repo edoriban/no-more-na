@@ -14,11 +14,26 @@ Extensión de navegador (Chrome/Edge) que reemplaza automáticamente colores gui
 
 ## Instalación
 
-1. Clonar o descargar este repositorio
-2. Abrir `chrome://extensions` (o `edge://extensions`)
-3. Activar **Modo de desarrollador**
-4. Clic en **Cargar extensión sin empaquetar**
-5. Seleccionar la carpeta `no-more-na`
+### Opción 1: Descargar release (recomendado)
+
+1. Ir a [Releases](https://github.com/edoriban/no-more-na/releases/latest)
+2. Descargar el archivo `.zip`
+3. Descomprimir en una carpeta
+4. Abrir `chrome://extensions` (o `edge://extensions`)
+5. Activar **Modo de desarrollador** (esquina superior derecha)
+6. Clic en **Cargar extensión sin empaquetar**
+7. Seleccionar la carpeta descomprimida
+
+### Opción 2: Desde el código fuente
+
+```bash
+git clone https://github.com/edoriban/no-more-na.git
+cd no-more-na
+./scripts/build.sh
+# El ZIP queda en dist/
+```
+
+Luego seguir los pasos 4-7 de la opción 1.
 
 ## Uso
 
