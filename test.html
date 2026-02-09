@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>No More NA - Test Page</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background: #f5f5f5;
+      color: #333;
+    }
+    h1 { margin-bottom: 30px; }
+    h2 {
+      margin-top: 30px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 8px;
+    }
+    .test-box {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 16px 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .label {
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 4px;
+    }
+    .sample { padding: 12px; margin: 8px 0; border-radius: 4px; }
+
+    /* === Test: CSS class colors === */
+    .guinda-light-bg { background-color: #9B2247; color: white; }
+    .guinda-bg { background-color: #611232; color: white; }
+    .guinda-mid-bg { background-color: #4E0E28; color: white; }
+    .guinda-dark-bg { background-color: #3A0B1E; color: white; }
+    .guinda-darkf-bg { background-color: #3A0B1F; color: white; }
+    .guinda-light-text { color: #9B2247; font-weight: bold; font-size: 18px; }
+    .guinda-text { color: #611232; font-weight: bold; font-size: 18px; }
+    .guinda-mid-text { color: #4E0E28; font-weight: bold; font-size: 18px; }
+    .guinda-dark-text { color: #3a0b1e; font-weight: bold; font-size: 18px; }
+    .guinda-border { border: 3px solid #611232; padding: 12px; }
+    .guinda-light-border { border: 3px solid #9B2247; padding: 12px; }
+    .guinda-mid-border { border: 3px solid #4E0E28; padding: 12px; }
+    .guinda-dark-border { border: 3px solid #3A0B1E; padding: 12px; }
+
+    /* === Test: rgb() syntax === */
+    .guinda-light-rgb { background-color: rgb(155, 34, 71); color: white; }
+    .guinda-rgb { background-color: rgb(97, 18, 50); color: white; }
+    .guinda-mid-rgb { background-color: rgb(78, 14, 40); color: white; }
+    .guinda-dark-rgb { background-color: rgb(58, 11, 30); color: white; }
+
+    /* === Test: rgba() with alpha === */
+    .guinda-light-rgba { background-color: rgba(155, 34, 71, 0.7); color: white; }
+    .guinda-rgba { background-color: rgba(97, 18, 50, 0.7); color: white; }
+    .guinda-dark-rgba { background-color: rgba(58, 11, 30, 0.5); color: white; }
+
+    /* === Test: Modern CSS syntax === */
+    .guinda-light-modern { background-color: rgb(155 34 71); color: white; }
+    .guinda-modern { background-color: rgb(97 18 50); color: white; }
+    .guinda-modern-alpha { background-color: rgb(97 18 50 / 0.8); color: white; }
+
+    /* === Test: Gradients === */
+    .guinda-gradient {
+      background: linear-gradient(135deg, #9B2247, #611232, #4E0E28, #3A0B1E);
+      color: white;
+      padding: 20px;
+    }
+
+    /* === Test: Box shadow === */
+    .guinda-shadow {
+      box-shadow: 0 4px 20px #611232;
+      padding: 20px;
+    }
+
+    /* === Test: Text shadow === */
+    .guinda-text-shadow {
+      text-shadow: 2px 2px 4px #611232;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* === Test: CSS custom property === */
+    :root {
+      --brand-light: #9B2247;
+      --brand-primary: #611232;
+      --brand-mid: #4E0E28;
+      --brand-dark: #3A0B1E;
+    }
+    .guinda-var {
+      background-color: var(--brand-primary);
+      color: white;
+    }
+    .guinda-var-dark {
+      background-color: var(--brand-dark);
+      color: white;
+    }
+
+    /* === Test: outline === */
+    .guinda-outline {
+      outline: 3px solid #611232;
+      outline-offset: 2px;
+      padding: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>No More NA - Color Replacement Test Page</h1>
+  <p>If the extension is working, all guinda/marrón colors should appear as green.</p>
+
+  <!-- Hex backgrounds -->
+  <h2>1. Hex Background Colors</h2>
+  <div class="test-box">
+    <div class="label">#9B2247 background (should be #00873E)</div>
+    <div class="sample guinda-light-bg">Guinda claro (#9B2247)</div>
+    <div class="label">#611232 background (should be #006847)</div>
+    <div class="sample guinda-bg">Guinda medio (#611232)</div>
+    <div class="label">#4E0E28 background (should be #005c3a)</div>
+    <div class="sample guinda-mid-bg">Guinda intermedio (#4E0E28)</div>
+    <div class="label">#3A0B1E background (should be #004d34)</div>
+    <div class="sample guinda-dark-bg">Guinda oscuro (#3A0B1E)</div>
+    <div class="label">#3A0B1F background (should be #004d34)</div>
+    <div class="sample guinda-darkf-bg">Guinda oscuro variante (#3A0B1F)</div>
+  </div>
+
+  <!-- Text colors -->
+  <h2>2. Text Colors</h2>
+  <div class="test-box">
+    <div class="label">#9B2247 text color</div>
+    <div class="sample guinda-light-text">This text should be bright green (#00873E)</div>
+    <div class="label">#611232 text color</div>
+    <div class="sample guinda-text">This text should be green (#006847)</div>
+    <div class="label">#4E0E28 text color</div>
+    <div class="sample guinda-mid-text">This text should be medium green (#005c3a)</div>
+    <div class="label">#3a0b1e text color (lowercase)</div>
+    <div class="sample guinda-dark-text">This text should be dark green (#004d34)</div>
+  </div>
+
+  <!-- Border colors -->
+  <h2>3. Border Colors</h2>
+  <div class="test-box">
+    <div class="label">#9B2247 border</div>
+    <div class="sample guinda-light-border">Bright green border expected</div>
+    <div class="label">#611232 border</div>
+    <div class="sample guinda-border">Green border expected</div>
+    <div class="label">#4E0E28 border</div>
+    <div class="sample guinda-mid-border">Medium green border expected</div>
+    <div class="label">#3A0B1E border</div>
+    <div class="sample guinda-dark-border">Dark green border expected</div>
+  </div>
+
+  <!-- rgb() -->
+  <h2>4. rgb() Syntax</h2>
+  <div class="test-box">
+    <div class="label">rgb(155, 34, 71) — #9B2247</div>
+    <div class="sample guinda-light-rgb">RGB comma syntax (claro)</div>
+    <div class="label">rgb(97, 18, 50) — #611232</div>
+    <div class="sample guinda-rgb">RGB comma syntax (medio)</div>
+    <div class="label">rgb(78, 14, 40) — #4E0E28</div>
+    <div class="sample guinda-mid-rgb">RGB comma syntax (intermedio)</div>
+    <div class="label">rgb(58, 11, 30) — #3A0B1E</div>
+    <div class="sample guinda-dark-rgb">RGB comma syntax (oscuro)</div>
+  </div>
+
+  <!-- rgba() -->
+  <h2>5. rgba() with Alpha</h2>
+  <div class="test-box">
+    <div class="label">rgba(155, 34, 71, 0.7)</div>
+    <div class="sample guinda-light-rgba">RGBA claro with 0.7 alpha</div>
+    <div class="label">rgba(97, 18, 50, 0.7)</div>
+    <div class="sample guinda-rgba">RGBA medio with 0.7 alpha</div>
+    <div class="label">rgba(58, 11, 30, 0.5)</div>
+    <div class="sample guinda-dark-rgba">RGBA oscuro with 0.5 alpha</div>
+  </div>
+
+  <!-- Modern syntax -->
+  <h2>6. Modern CSS rgb() Syntax</h2>
+  <div class="test-box">
+    <div class="label">rgb(155 34 71)</div>
+    <div class="sample guinda-light-modern">Modern space syntax (claro)</div>
+    <div class="label">rgb(97 18 50)</div>
+    <div class="sample guinda-modern">Modern space syntax (medio)</div>
+    <div class="label">rgb(97 18 50 / 0.8)</div>
+    <div class="sample guinda-modern-alpha">Modern with alpha</div>
+  </div>
+
+  <!-- Gradient -->
+  <h2>7. Gradient</h2>
+  <div class="test-box">
+    <div class="label">linear-gradient(135deg, #9B2247, #611232, #4E0E28, #3A0B1E)</div>
+    <div class="sample guinda-gradient">Gradient should show four greens</div>
+  </div>
+
+  <!-- Shadows -->
+  <h2>8. Box Shadow &amp; Text Shadow</h2>
+  <div class="test-box">
+    <div class="label">box-shadow: 0 4px 20px #611232</div>
+    <div class="sample guinda-shadow">Green box shadow</div>
+    <br>
+    <div class="label">text-shadow: 2px 2px 4px #611232</div>
+    <div class="sample guinda-text-shadow">Green text shadow</div>
+  </div>
+
+  <!-- CSS Variables -->
+  <h2>9. CSS Custom Properties (Variables)</h2>
+  <div class="test-box">
+    <div class="label">var(--brand-light) = #9B2247</div>
+    <div class="sample" style="background-color: var(--brand-light); color: white;">CSS variable claro</div>
+    <div class="label">var(--brand-primary) = #611232</div>
+    <div class="sample guinda-var">CSS variable medio</div>
+    <div class="label">var(--brand-mid) = #4E0E28</div>
+    <div class="sample" style="background-color: var(--brand-mid); color: white;">CSS variable intermedio</div>
+    <div class="label">var(--brand-dark) = #3A0B1E</div>
+    <div class="sample guinda-var-dark">CSS variable oscuro</div>
+  </div>
+
+  <!-- Outline -->
+  <h2>10. Outline</h2>
+  <div class="test-box">
+    <div class="label">outline: 3px solid #611232</div>
+    <div class="sample guinda-outline">Green outline expected</div>
+  </div>
+
+  <!-- Inline styles -->
+  <h2>11. Inline Styles</h2>
+  <div class="test-box">
+    <div class="label">Inline style="background-color: #611232"</div>
+    <div class="sample" style="background-color: #611232; color: white;">Inline background</div>
+    <div class="label">Inline style="color: #3A0B1F"</div>
+    <div class="sample" style="color: #3A0B1F; font-weight: bold; font-size: 18px;">Inline text color</div>
+    <div class="label">Inline style with rgb(97, 18, 50)</div>
+    <div class="sample" style="background-color: rgb(97, 18, 50); color: white;">Inline rgb</div>
+  </div>
+
+  <!-- SVG -->
+  <h2>12. SVG Colors</h2>
+  <div class="test-box">
+    <div class="label">SVG fill="#9B2247", "#611232", "#4E0E28" and stroke="#3A0B1E"</div>
+    <svg width="300" height="80" viewBox="0 0 300 80">
+      <rect x="5" y="10" width="50" height="60" fill="#9B2247" rx="8" />
+      <rect x="65" y="10" width="50" height="60" fill="#611232" rx="8" />
+      <rect x="125" y="10" width="50" height="60" fill="#4E0E28" rx="8" />
+      <rect x="185" y="10" width="50" height="60" fill="none" stroke="#3A0B1E" stroke-width="4" rx="8" />
+      <circle cx="270" cy="40" r="25" fill="#9B2247" />
+    </svg>
+  </div>
+
+  <!-- Legacy HTML attributes -->
+  <h2>13. Legacy HTML Attributes</h2>
+  <div class="test-box">
+    <div class="label">table bgcolor="#9B2247"</div>
+    <table bgcolor="#9B2247" width="100%" cellpadding="10">
+      <tr><td style="color:white">Legacy bgcolor table (#9B2247)</td></tr>
+    </table>
+    <br>
+    <div class="label">table bgcolor="#611232"</div>
+    <table bgcolor="#611232" width="100%" cellpadding="10">
+      <tr><td style="color:white">Legacy bgcolor table (#611232)</td></tr>
+    </table>
+    <br>
+    <div class="label">font color="#4E0E28"</div>
+    <font color="#4E0E28" size="4"><b>Legacy font color (#4E0E28)</b></font>
+  </div>
+
+  <!-- Dynamic content -->
+  <h2>14. Dynamic Content (added after 2s)</h2>
+  <div class="test-box" id="dynamic-container">
+    <div class="label">Elements will be added here after 2 seconds...</div>
+  </div>
+
+  <!-- Shadow DOM -->
+  <h2>15. Shadow DOM</h2>
+  <div class="test-box">
+    <div class="label">Custom element with shadow DOM</div>
+    <div id="shadow-host"></div>
+  </div>
+
+  <script>
+    // Dynamic content test
+    setTimeout(() => {
+      const container = document.getElementById('dynamic-container');
+
+      const div1 = document.createElement('div');
+      div1.className = 'sample';
+      div1.style.backgroundColor = '#611232';
+      div1.style.color = 'white';
+      div1.textContent = 'Dynamically added element (bg #611232)';
+      container.appendChild(div1);
+
+      const div2 = document.createElement('div');
+      div2.className = 'sample';
+      div2.style.color = '#3A0B1F';
+      div2.style.fontWeight = 'bold';
+      div2.style.fontSize = '18px';
+      div2.textContent = 'Dynamically added text color (#3A0B1F)';
+      container.appendChild(div2);
+
+      // Add a new style element dynamically
+      const style = document.createElement('style');
+      style.textContent = '.dynamic-styled { background-color: #611232; color: white; padding: 12px; margin: 8px 0; border-radius: 4px; }';
+      document.head.appendChild(style);
+
+      const div3 = document.createElement('div');
+      div3.className = 'dynamic-styled';
+      div3.textContent = 'Dynamically styled via new <style> element';
+      container.appendChild(div3);
+    }, 2000);
+
+    // Shadow DOM test
+    const host = document.getElementById('shadow-host');
+    const shadow = host.attachShadow({ mode: 'open' });
+    shadow.innerHTML = `
+      <style>
+        .shadow-box {
+          background-color: #9B2247;
+          color: white;
+          padding: 12px;
+          border-radius: 4px;
+          margin: 8px 0;
+        }
+        .shadow-box-mid {
+          background-color: #4E0E28;
+          color: white;
+          padding: 12px;
+          border-radius: 4px;
+          margin: 8px 0;
+        }
+        .shadow-text {
+          color: #3A0B1E;
+          font-weight: bold;
+          font-size: 18px;
+        }
+      </style>
+      <div class="shadow-box">Shadow DOM background (#9B2247)</div>
+      <div class="shadow-box-mid">Shadow DOM background (#4E0E28)</div>
+      <div class="shadow-text">Shadow DOM text (#3A0B1E)</div>
+    `;
+  </script>
+
+</body>
+</html>
